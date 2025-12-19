@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--color-black);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+.btn {
+  font-size: var(--fs-lg);
+  outline: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/fonts/Raleway-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-blue: #057ada;
+  --color-orange: #da722c;
+  --color-white: #fff;
+  --color-white-light: #e8f7fb;
+  --color-black: #070917;
+  --color-black-light: #023047;
+  --color-violet: #6f7dfb;
+  --gradient-blue: linear-gradient(
+    to bottom,
+    var(--color-violet) 0%,
+    var(--color-blue) 100%
+  );
+  --font-base: "Inter", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-heading-base: 3.125rem;
+  --fs-heading-lg: 3.75rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --radius-base: 1.5rem;
+  --bp-mobile: 25.875rem;
+  --bp-tablet: 53.375rem;
+  --bp-desktop: 85.375rem;
+}
+
+/*# sourceMappingURL=style.css.map */

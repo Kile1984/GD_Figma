@@ -1,0 +1,48 @@
+:root {
+  // Primary color
+  --color-blue: #057ada;
+  --color-orange: #da722c;
+
+  // Neutral colors
+  --color-white: #fff;
+  --color-white-light: #e8f7fb;
+  --color-black: #070917;
+  --color-black-light: #023047;
+
+  // Accent color
+  --color-violet: #6f7dfb;
+
+  // Gradient
+  --gradient-blue: linear-gradient(
+    to bottom,
+    var(--color-violet) 0%,
+    var(--color-blue) 100%
+  );
+
+  // Font family
+  --font-base: "Inter", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  // Font-size
+  --fs-sm: 0.875rem; //14px
+  --fs-base: 1rem; //16px
+  --fs-lg: 1.125rem; //18px
+  --fs-xl: 1.5rem; //24px
+  --fs-heading-base: 3.125rem; //50px
+  --fs-heading-lg: 3.75rem; //60px
+
+  // Spacing
+  --space-xs: 0.25rem; //4px
+  --space-sm: 0.5rem; //8px
+  --space-md: 1rem; //16px
+  --space-lg: 2rem; //32px
+  --space-xl: 3rem; //48px
+
+  // Radius
+  --radius-base: 1.5rem; //24px
+
+  // Breakpoints
+  --bp-mobile: 25.875rem; // 414px
+  --bp-tablet: 53.375rem; // 854px
+  --bp-desktop: 85.375rem; //1366px
+}
