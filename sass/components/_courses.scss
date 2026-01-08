@@ -1,0 +1,112 @@
+@use "../abstract/mixins";
+
+.courses {
+  background: var(--gradient-blue);
+
+  &__wrapper {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &.container {
+      @include mixins.respond(mobile) {
+        padding-inline: 0;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    min-width: 0;
+    margin-bottom: var(--space-xl-plus);
+
+    @include mixins.respond(tablet) {
+      margin-bottom: var(--space-xl-big);
+    }
+  }
+
+  &__cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(2rem, 6.9vw, 83px);
+    align-items: stretch;
+
+    h4 {
+      align-self: self-start;
+    }
+
+    @include mixins.respond(tablet) {
+      grid-template-columns: 1fr;
+      gap: 80px;
+    }
+  }
+
+  &__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card-content {
+    background-color: var(--color-white);
+    padding: 0 var(--space-lg);
+    border-radius: var(--radius-base);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: var(--color-blue-dark);
+      height: 8px;
+      left: 2rem;
+      right: 2rem;
+      bottom: 0;
+      border-radius: 8px;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5px;
+    flex-grow: 1;
+    align-items: center;
+    margin-bottom: var(--space-lg-minus);
+  }
+
+  &__duration {
+    font-weight: 900;
+    color: var(--color-blue-dark);
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+
+    @include mixins.respond(tablet) {
+      margin-top: 50px;
+    }
+
+    @include mixins.respond(mobile) {
+      margin-right: 32px;
+    }
+  }
+}

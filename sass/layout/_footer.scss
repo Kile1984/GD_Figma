@@ -1,0 +1,165 @@
+@use "../abstract/mixins";
+
+.footer {
+  background-color: var(--color-black);
+  padding: 70px 0;
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 2fr;
+
+    @include mixins.respond(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 43em) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      row-gap: 40px;
+    }
+  }
+
+  &__section {
+    @media only screen and (max-width: 43em) {
+      justify-items: stretch;
+    }
+  }
+
+  &__section:last-of-type {
+    @include mixins.respond(tablet) {
+      grid-column: 1/-1;
+      margin-top: 45px;
+    }
+
+    @media only screen and (max-width: 43em) {
+      margin-top: 0;
+    }
+  }
+
+  &__heading {
+    color: var(--color-orange);
+    margin-bottom: var(--space-sm-plus);
+  }
+
+  &__list {
+    color: var(--color-white);
+    list-style-type: none;
+    padding-left: var(--space-lg-minus);
+
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    a {
+      line-height: 2;
+      font-weight: 400;
+
+      &:hover {
+        color: var(--color-orange);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-orange);
+        outline-offset: 4px;
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+
+    @media only screen and (max-width: 43em) {
+      padding-left: 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 28px;
+    margin: 7px 0 30px 0;
+
+    @media only screen and (max-width: 43em) {
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__item-facebook {
+    .icon-facebook {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__item-instagram {
+    .icon-instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__credit {
+    color: var(--color-white);
+    margin-top: var(--space-lg);
+
+    @include mixins.respond(tablet) {
+      grid-column: 1/-1;
+    }
+
+    @media only screen and (max-width: 43em) {
+      margin-top: 40px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    padding-left: var(--space-lg-minus);
+
+    display: flex;
+    align-items: center;
+
+    @include mixins.respond(tablet) {
+      width: 85%;
+    }
+
+    @media only screen and (max-width: 43em) {
+      width: 100%;
+      padding-left: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+
+    height: 39px;
+    padding-left: 27px;
+    border-radius: 8px;
+    border: none;
+
+    @media only screen and (max-width: 43em) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    font-size: var(--fs-base);
+    color: var(--color-white);
+    font-weight: 400;
+    transition: all 0.5s;
+    outline: none;
+    border: none;
+    padding: var(--space-xs) var(--space-sm);
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    position: absolute;
+    right: 8px;
+
+    @media only screen and (max-width: 43em) {
+      position: static;
+    }
+  }
+}

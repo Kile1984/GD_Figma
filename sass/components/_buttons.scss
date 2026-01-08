@@ -1,8 +1,40 @@
 .btn {
   font-size: var(--fs-lg);
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-md) var(--space-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--radius-base);
   outline: none;
   border: none;
-  border-radius: 0;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: background-color 0.5s, color 0.3s;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &--dark {
+    background-color: var(--color-blue-dark);
+
+    &:hover {
+      background-color: var(--color-orange);
+    }
+  }
+
+  &--orange {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+
+    &:hover {
+      background-color: var(--color-blue-dark);
+    }
+  }
 }

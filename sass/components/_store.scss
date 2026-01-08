@@ -1,0 +1,53 @@
+@use "../abstract/mixins";
+
+.store {
+  text-align: center;
+
+  &__heading {
+    margin-bottom: var(--space-sm-plus);
+
+    @include mixins.respond(tablet) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__par {
+    margin-bottom: var(--space-xl-minus);
+
+    @include mixins.respond(tablet) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__apps {
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    column-gap: clamp(1.5rem, 2.5vw, 30px);
+
+    a {
+      font-weight: 400;
+      font-size: var(--fs-xl);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 20px 31px;
+    }
+
+    @media only screen and (max-width: 43em) {
+      flex-direction: column;
+      gap: 26px;
+      align-items: center;
+    }
+  }
+
+  &__app {
+    background-color: var(--color-black);
+    min-width: 310px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}

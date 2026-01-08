@@ -1,3 +1,4 @@
+@use "../abstract/mixins";
 // Poppins
 
 @font-face {
@@ -47,4 +48,77 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+}
+
+.heading {
+  &--primary {
+    font-size: var(--fs-heading-base);
+    line-height: 1.25;
+
+    @include mixins.respond(tablet) {
+      font-size: var(--fs-heading-base);
+    }
+
+    @include mixins.respond(mobile) {
+      font-size: var(--fs-xxl);
+    }
+  }
+
+  &--secondary {
+    font-size: var(--fs-heading-lg);
+    line-height: 1.2;
+
+    @include mixins.respond(mobile) {
+      font-size: 30px;
+    }
+  }
+
+  &--tertiary {
+    font-size: var(--fs-xxl);
+
+    @include mixins.respond(mobile) {
+      font-size: 30px;
+    }
+  }
+
+  &--quaternary {
+    font-size: var(--fs-xl);
+  }
+
+  &--light {
+    color: var(--color-white);
+  }
+
+  &--dark {
+    color: var(--color-blue-dark);
+  }
+}
+
+.par {
+  &--dark {
+    color: var(--color-blue-dark);
+  }
+
+  &--dark-bold {
+    color: var(--color-blue-dark);
+    font-weight: 900;
+  }
+
+  &--light {
+    color: var(--color-white);
+    font-weight: 400;
+  }
+
+  &--light-bold {
+    color: var(--color-white);
+    font-weight: 900;
+  }
+
+  &--base {
+    font-size: var(--fs-base);
+  }
+
+  &--medium {
+    font-size: var(--fs-lg);
+  }
 }
