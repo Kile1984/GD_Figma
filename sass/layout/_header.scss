@@ -2,6 +2,8 @@
 
 .header {
   padding-top: 42px;
+  padding-bottom: 42px;
+  background: var(--gradient-blue);
 
   @include mixins.respond(tablet) {
     padding-top: 60px;
@@ -38,7 +40,7 @@
   }
 
   &--home {
-    background: var(--gradient-blue);
+    padding-bottom: 0;
   }
 
   &__nav {
@@ -101,6 +103,12 @@
   &__item {
     &:not(:last-child):hover {
       color: var(--color-blue-dark);
+    }
+  }
+
+  &__link {
+    &--active {
+      color: var(--color-orange);
     }
   }
 }
