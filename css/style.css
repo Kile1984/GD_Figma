@@ -232,6 +232,8 @@ a {
 
 .header {
   padding-top: 42px;
+  padding-bottom: 42px;
+  background: var(--gradient-blue);
 }
 @media only screen and (max-width: 53.375em) {
   .header {
@@ -270,7 +272,7 @@ a {
   }
 }
 .header--home {
-  background: var(--gradient-blue);
+  padding-bottom: 0;
 }
 .header__nav {
   color: var(--color-white);
@@ -328,6 +330,9 @@ a {
 }
 .header__item:not(:last-child):hover {
   color: var(--color-blue-dark);
+}
+.header__link--active {
+  color: var(--color-orange);
 }
 
 .hero {
